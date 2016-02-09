@@ -6,9 +6,12 @@
                 <a data-ui-sref="movies.movie({movie_title: movie.title})">
                     {{ movie.title | titlecase }}
                 </a>
+                <span data-ng-if="movie.checkedIn"></span>
+                <span data-ng-show="movie.checkedIn">Checked In</span>
+                <span data-ng-hide="movie.checkedOut">Unavailable</span>
             </h3>
             <p>
-                runtime: {{ movie.runTime }}  |
+                runtime: {{ movie.runTime | timeHours }}  |
                 year released: {{ movie.releaseYear }}  |
                 genre: {{ movie.genre | titlecase }}
             </p>

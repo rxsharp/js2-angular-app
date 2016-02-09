@@ -3,7 +3,6 @@
     'use strict';
 
     angular.module('customFilters')
-
         .filter('titlecase', function() {
             return function(input) {
 
